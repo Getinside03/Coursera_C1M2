@@ -69,7 +69,7 @@ endif
 	$(CC) -c $^ -o $@ $(CFLAGS) $(INCLUDES)
 
 c1m2.out: $(OBJS)
-	$(CC) $(CFLAGS) -o c1m2.out $(OBJS) $(INCLUDES)
+	$(CC) $(CFLAGS) -o c1m2.out $(OBJS) $(INCLUDES) -Xlinker -Map=c1m2.map
 
 # Compile all object files, but do not link.
 .PHONY: compile-all
